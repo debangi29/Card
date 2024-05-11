@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background-image: url('Untitled\ design.png');
+    background-size: cover; /* Scale the image to cover the entire container */
+    background-position: top; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+
+  }
+  .card {
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+  }
+  .card:hover {
+    transform: rotate(-5deg);
+  }
+  .card:hover .outside {
+    transform: rotateY(-160deg);
+  }
+  .outside,
+  .inside {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50.1%;
+  }
+  .inside {/*3rd page*/
+    background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+    line-height: 2;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+  }
+  .outside {/*1st page*/
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+  }
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+  }
+  .front {
+    background-color: #ffffff;
+  }
+  .back {
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+  }
+  .balloons {
+    position: absolute; /* Positioning */
+  }
+  
+  /* Styling for individual balloons */
+  .balloon-1,
+  .balloon-2,
+  .balloon-3,
+  .balloon-4 {
+    position: absolute; /* Positioning */
+    width: 85px; /* Fixed width */
+    height: 95px; /* Fixed height */
+    border-radius: 50%; /* Border radius for circle shape */
+  }
+  
+  /* Styling for each individual balloon */
+  .balloon-1 {
+    background-color: rgba(255, 40, 90, 0.7); /* Background color */
+    left: -1px; /* Position */
+    top: 50px; /* Position */
+  }
+  
+  .balloon-2 {
+    background-color: rgba(9, 215, 160, 0.7); /* Background color */
+    left: 50px; /* Position */
+    top: 20px; /* Position */
+  }
+  
+  .balloon-3 {
+    background-color: rgba(255, 186, 26, 0.7); /* Background color */
+    left: 110px; /* Position */
+    top: 50px; /* Position */
+  }
+  
+  .balloon-4 {
+    background-color: rgba(12, 122, 159, 0.7); /* Background color */
+    left: 160px; /* Position */
+    top: 50px; /* Position */
+  }
+  
+  /* Styling for balloon strings */
+  .balloon-1::before,
+  .balloon-2::before,
+  .balloon-3::before,
+  .balloon-4::before {
+    content: ""; /* Empty content */
+    position: absolute; /* Positioning */
+    width: 1px; /* Width */
+    height: 200px; /* Height */
+    background-color: #ffc848; /* Background color */
+    top: 95px; /* Position */
+    left: 43px; /* Position */
+  }
+  
+  /* Styling for balloon tails */
+  .balloon-1::after,
+  .balloon-2::after,
+  .balloon-3::after,
+  .balloon-4::after {
+    content: ""; /* Empty content */
+    position: absolute; /* Positioning */
+    border-right: 7px solid transparent; /* Border for tail */
+    border-left: 7px solid transparent; /* Border for tail */
+    top: 94px; /* Position */
+    left: 37px; /* Position */
+  }
+  
+  /* Styling for each balloon's tail */
+  .balloon-1::after {
+    border-bottom: 10px solid #ff3e6b; /* Border for tail */
+  }
+  
+  .balloon-2::after {
+    border-bottom: 10px solid #04b183; /* Border for tail */
+  }
+  
+  .balloon-3::after {
+    border-bottom: 10px solid #ffc94c; /* Border for tail */
+  }
+  
+  .balloon-4::after {
+    border-bottom: 10px solid #13a9bd; /* Border for tail */
+  }
+  .heimage {
+    position: absolute;
+    bottom:0;
+    left: 40;
+  }
+  .hevideo {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+  }
+  .gify {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+  .gifyo {
+    position: absolute;
+    top: 120px;
+    left: 270px;
+}
+
+  .outside p {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 6px;
+    color: #0f0fdb;
+  }
+  h3{
+    font-size: 23px;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #000046;
+    font-style: oblique;
+  }
+  .inside h1 {
+    font-size: 120px;
+    line-height: 120px;
+  }
+  .inside p{
+    font-family: 'Lucida Handwritting', cursive;
+    font-style: italic;
+  }
+  inside.gify2 {
+    position: absolute;
+    bottom: 0 px;
+    right: 0 px;
+  }
